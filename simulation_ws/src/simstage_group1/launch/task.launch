@@ -1,0 +1,10 @@
+<launch>
+
+
+<arg name="map_name" default="rooms" /> 
+
+<node pkg="stage_ros" type="stageros" name="stage_ros" args="$(find simstage_group1)/worlds/$(arg map_name).world" output="screen" />
+<node pkg="simstage_group1" type="robot_navigation.py" name="robot_navigation_py" output="screen" cwd="node" >
+
+</node>
+</launch>
